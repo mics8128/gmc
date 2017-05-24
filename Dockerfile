@@ -1,7 +1,6 @@
 FROM alpine:3.5
 
 ENV GOPATH /home/go
-ENV PACKAGE github.com/sammy007/ether-proxy
 
 RUN apk --update add -ut build-deps \
     go \
