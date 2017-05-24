@@ -7,7 +7,7 @@ RUN apk --update add -ut build-deps \
     go \
     git \
     g++ \
-	make
+    make
 
 RUN git config --global http.https://gopkg.in.followRedirects true
 
