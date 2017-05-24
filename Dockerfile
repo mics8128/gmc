@@ -1,6 +1,13 @@
-FROM ubuntu:16.04
+FROM alpine:3.5
 
-RUN apt-get update && apt-get -y install build-essential golang git
+ENV GOPATH /home/go
+ENV PACKAGE github.com/sammy007/ether-proxy
+
+RUN apk --update add -ut build-deps \
+    go \
+    git \
+    g++ \
+	make
 
 RUN git config --global http.https://gopkg.in.followRedirects true
 
